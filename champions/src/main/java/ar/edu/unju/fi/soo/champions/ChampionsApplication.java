@@ -7,7 +7,7 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 @SpringBootApplication
 public class ChampionsApplication {
 	
-	//Main
+	//Main to Main
 	public static void main(String[] args) {
 		SpringApplication.run(ChampionsApplication.class, args);
 		
