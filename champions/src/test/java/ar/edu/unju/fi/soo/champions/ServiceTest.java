@@ -6,6 +6,7 @@ import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 
+import ar.edu.unju.fi.soo.champions.entity.Player;
 import ar.edu.unju.fi.soo.champions.entity.Team;
 import ar.edu.unju.fi.soo.champions.service.ChampionsService;
 
@@ -17,6 +18,9 @@ public class ServiceTest {
 	@Test
 	void searchTeam() {
 		Team team = service.findTeamByName("Barcelona");
+		for (Player player : team.getPlayers()) {
+			System.out.println(player.toString());
+		}
 		assertEquals(3, team.getPlayers().size());
 	}
 }
